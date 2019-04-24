@@ -1,14 +1,15 @@
 package com.hotel.myapp.controller;
 
-import java.io.Console;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.multipart.support.RequestPartServletServerHttpRequest;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.hotel.myapp.dao.BookingDao;
@@ -142,10 +143,27 @@ public class HotelController {
 
 		// GET ALL BOOKING UNDER THIS USER
 		List<Booking> bookings = bookingDao.findAllOrderByUserEmail(curUser.getUserEmail());
-		System.out.println(bookings);
 //		request.setAttribute("bookings", bookings);
 		return new ModelAndView("viewbooking", "bookings", bookings);
 	}
+	
+	@RequestMapping(value = "/managebooking", method = RequestMethod.GET)
+	public ModelAndView manangeBookingView(BookingDao bookingDao, HttpServletRequest request) throws Exception {
+		List<Booking> bookings = bookingDao.findAllOrder();
+		for(Booking booking : bookings) {
+			System.out.println(booking.getHotelName());
+		}
+		return new ModelAndView("managebooking", "bookings", bookings);
+	}
+	
+//	@RequestMapping(value = "/cancelbooking/*", method = RequestMethod.GET)
+//	public String deleteBooking(BookingDao bookingDao, HttpServletRequest request) throws Exception{
+//		String id = request.getParameter("id");
+//		String sId = id.replaceAll("'", "");
+//		System.out.println(sId);
+//		bookingDao.deleteBookingById(sId);
+//		return "redirect:/hotels";
+//	}
 
 	@RequestMapping(value = "/hotelsearch", method = RequestMethod.POST)
 	public ModelAndView searchHotel(HotelDao hotelDao, HttpServletRequest request) throws Exception {

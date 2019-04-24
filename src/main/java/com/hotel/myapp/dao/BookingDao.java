@@ -35,4 +35,32 @@ public class BookingDao extends DAO{
 		}
 		return result;
 	}
+	
+	public List<Booking> findAllOrder() throws Exception{
+		List<Booking> result = null;
+		try {
+			begin();
+			Query query = getSession().createQuery("from Booking");
+			result = query.list();
+			commit();
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		return result;
+	}
+	
+	public void deleteBookingById(String id){
+		try {
+			begin();
+			Query query = getSession().createQuery("delete Booking where id = :id");
+			query.setString("id", id);
+			query.executeUpdate();
+		}
+		catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+	}
 }

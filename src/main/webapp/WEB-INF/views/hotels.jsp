@@ -20,16 +20,20 @@
 	<nav class="navbar navbar-default">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="hotels">Hotels</a> 
-				<c:set var = "user" scope="session" value="${sessionScope.curUser}"/>
+				<a class="navbar-brand" href="hotels">Hotels</a>
+				<c:set var="user" scope="session" value="${sessionScope.curUser}" />
 				<c:if test="${user == null}">
-				<a class="navbar-brand" href="register">Register</a>
-				<a class="navbar-brand" href="login">Login</a>
+					<a class="navbar-brand" href="register">Register</a>
+					<a class="navbar-brand" href="login">Login</a>
 				</c:if>
 				<c:if test="${user != null}">
-				<a class="navbar-brand"> login in as <c:out value="${user.getUserEmail()}"/></a>
-				<a class="navbar-brand"  href="viewbooking">View Booking</a>
-				<a class="navbar-brand"  href="logout">Logout</a>
+					<a class="navbar-brand"> login in as <c:out
+							value="${user.getUserEmail()}" /></a>
+					<a class="navbar-brand" href="viewbooking">View Booking</a>
+					<c:if test="${user.getType() == 'Admin'}">
+						<a class="navbar-brand" href="managebooking">Manage Booking</a>
+					</c:if>
+					<a class="navbar-brand" href="logout">Logout</a>
 				</c:if>
 			</div>
 		</div>
@@ -48,8 +52,8 @@
 							</div>
 							<button class="btn btn-danger wrn-btn">Submit</button>
 							<c:if test="${user != null}">
-							<a class="btn btn-primary btn-large" href="/myapp/hoteladd">
-								Add New Hotel</a>
+								<a class="btn btn-primary btn-large" href="/myapp/hoteladd">
+									Add New Hotel</a>
 							</c:if>
 						</form>
 					</div>
@@ -69,11 +73,13 @@
 				<div class="thumbnail">
 					<img src="${hotel.getImage()}">
 					<div class="caption">
-						<h4><c:out value="${hotel.getHotelName()}" /></h4>
+						<h4>
+							<c:out value="${hotel.getHotelName()}" />
+						</h4>
 					</div>
 					<p>
-						<a class="btn btn-primary" href="/myapp/hoteldetail/?id='${hotel.getId()}'">More
-							Info</a>
+						<a class="btn btn-primary"
+							href="/myapp/hoteldetail/?id='${hotel.getId()}'">More Info</a>
 					</p>
 				</div>
 			</div>

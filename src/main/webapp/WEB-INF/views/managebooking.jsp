@@ -19,9 +19,9 @@
 	float: left;
 	width: 100%;
 	background: #004080; /* fallback for old browsers */
-	background: -webkit-linear-gradient(to bottom, #2bc493, #0066cc);
+	background: -webkit-linear-gradient(to bottom, #004080, #0066cc);
 	/* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to bottom, #2bc493, #0066cc);
+	background: linear-gradient(to bottom, #004080, #0066cc);
 	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
@@ -98,7 +98,7 @@
 }
 
 .btn-default {
-	background: #2a8082;
+	background: #6B456A;
 	color: #fff;
 	border-radius: 30px;
 	border: none;
@@ -113,7 +113,7 @@
 	<div class="container">
 		<div class="row">
 			<h2 class="text-center">
-				<span>Your Booking</span>
+				<span>Manage Booking</span>
 		</div>
 		<c:if test="${requestScope.bookings != null}">
 			<div class="col-md-10 offset-md-1 row-block">
@@ -133,8 +133,7 @@
 								<p>For norland produce age wishing. To figure on it spring season up. Her provision acuteness had excellent two why intention. As called mr needed praise at. Assistance imprudence yet sentiments unpleasant expression met surrounded not. Be at talked ye though secure nearer. </p>
 							</div>
 							<div class="media-right align-self-center">
-								<%-- <a href="/myapp/cancelbooking/?id='${booking.getId()}'" class="btn btn-default">Cancel</a> --%>
-								<a class="btn btn-default">Cancel</a>
+								<a href="#" class="btn btn-default">Cancel</a>
 							</div>
 						</div></li>
 					</c:forEach>
