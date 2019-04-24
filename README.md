@@ -16,3 +16,17 @@ A web application for hotel booking and hotel info management.
   ###### - General user view all his/her bookings
   ###### - Admin CRUD hotel information
   ###### - Admin manage all user's bookings
+
+## Demo
+  ###### Welcome Page
+  ![alt text](https://github.com/vickypeng0516/SpringMVC-Hibernate-HotelBookingWebApplication/blob/master/img/Screen%20Shot%202019-04-23%20at%2010.43.03%20PM.png)
+  ###### Register/Login
+  ![alt text](https://github.com/vickypeng0516/SpringMVC-Hibernate-HotelBookingWebApplication/blob/master/img/Screen%20Shot%202019-04-23%20at%2010.45.21%20PM.png)
+  ###### Landing
+  ![alt text](https://github.com/vickypeng0516/SpringMVC-Hibernate-HotelBookingWebApplication/blob/master/img/Screen%20Shot%202019-04-23%20at%2010.48.02%20PM.png)
+  ###### Hotel Info
+   ![alt text](https://github.com/vickypeng0516/SpringMVC-Hibernate-HotelBookingWebApplication/blob/master/img/Screen%20Shot%202019-04-23%20at%2010.47.21%20PM.png?raw=true)
+  ###### CURD Form Example
+   ![alt text](https://github.com/vickypeng0516/SpringMVC-Hibernate-HotelBookingWebApplication/blob/master/img/Screen%20Shot%202019-04-23%20at%2010.47.45%20PM.png?raw=true)
+  ###### View Order
+   ![alt text](https://github.com/vickypeng0516/SpringMVC-Hibernate-HotelBookingWebApplication/blob/master/img/Screen%20Shot%202019-04-23%20at%2010.48.47%20PM.png?raw=true)
