@@ -26,7 +26,7 @@ A web application for hotel booking and hotel info management.
   ![alt text](https://github.com/vickypeng0516/SpringMVC-Hibernate-HotelBookingWebApplication/blob/master/img/Screen%20Shot%202019-04-23%20at%2010.48.02%20PM.png)
   ###### Hotel Info
    ![alt text](https://github.com/vickypeng0516/SpringMVC-Hibernate-HotelBookingWebApplication/blob/master/img/Screen%20Shot%202019-04-23%20at%2010.47.21%20PM.png?raw=true)
-  ###### CURD Form Example
+  ###### Adim CURD Form Example
    ![alt text](https://github.com/vickypeng0516/SpringMVC-Hibernate-HotelBookingWebApplication/blob/master/img/Screen%20Shot%202019-04-23%20at%2010.47.45%20PM.png?raw=true)
-  ###### View Order
+  ###### Adim View Order
    ![alt text](https://github.com/vickypeng0516/SpringMVC-Hibernate-HotelBookingWebApplication/blob/master/img/Screen%20Shot%202019-04-23%20at%2010.48.47%20PM.png?raw=true)
